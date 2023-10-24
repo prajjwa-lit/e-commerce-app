@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shoppingapp/home.dart';
 import 'package:shoppingapp/product_data.dart';
-class Furniture extends StatelessWidget {
+class Kitchen extends StatelessWidget {
 
-  Furniture({super.key});
+  Kitchen({super.key});
   final List<ProductDetails> temp = [
     ProductDetails(image: 'fasjfas', name: 'product 1', price: '150 rupiya'),
     ProductDetails(image: 'fasjfas', name: 'product 2', price: '150 rupiya'),
@@ -22,18 +22,18 @@ class Furniture extends StatelessWidget {
     return Container(
       color: Colors.white,
       child: CustomScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         slivers: <Widget>[
-           SliverAppBar(
-             leading: IconButton(onPressed: () {
-               Navigator.pushReplacement(
-                 context,
-                 MaterialPageRoute(
-                     builder: (context) => const MyHome()),
-               );
-             }, icon: Icon(Icons.arrow_back,color: Colors.black)),
+          SliverAppBar(
+            leading: IconButton(onPressed: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const MyHome()),
+              );
+            }, icon: Icon(Icons.arrow_back,color: Colors.black)),
             pinned: true,
-            expandedHeight: 300.0,
+            expandedHeight: 350.0,
             // collapsedHeight: 100.0,
             flexibleSpace: Container(
               decoration: BoxDecoration(
@@ -51,18 +51,18 @@ class Furniture extends StatelessWidget {
               ),
               child: FlexibleSpaceBar(
                 centerTitle: true,
-                background: Image(image: AssetImage('assets/furniture4.png'),),
-                title: Text('Furniture',
-                textAlign: TextAlign.end,
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 25,
-                    letterSpacing: 2.0,
-                    decoration: TextDecoration.underline,
-                    decorationStyle: TextDecorationStyle.dashed
+                background: Image(image: AssetImage('assets/kitchenbanner.png'),),
+                title: Text('Kitchen',
+                  textAlign: TextAlign.end,
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 25,
+                      letterSpacing: 2.0,
+                      decoration: TextDecoration.underline,
+                      decorationStyle: TextDecorationStyle.dashed
+                  ),
                 ),
-                ),
-                expandedTitleScale: 1.5,
+                expandedTitleScale: 1.50,
               ),
             ),
           ),
