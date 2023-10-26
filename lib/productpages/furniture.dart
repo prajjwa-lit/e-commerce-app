@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:shoppingapp/home.dart';
 import 'package:shoppingapp/product_data.dart';
-class Sports extends StatelessWidget {
+class Furniture extends StatelessWidget {
 
-  Sports({super.key});
+  Furniture({super.key});
   final List<ProductDetails> temp = [
-    ProductDetails(image: 'fasjfas', name: 'product 1', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 2', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 3', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 4', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 5', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 6', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 7', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 8', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 9', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 10', price: '150 rupiya'),
+    ProductDetails(image: 'fasjfas', name: 'product 1', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 2', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 3', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 4', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 5', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 6', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 7', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 8', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 9', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 10', price: '₹150'),
   ];
 
   @override
@@ -22,16 +22,16 @@ class Sports extends StatelessWidget {
     return Container(
       color: Colors.white,
       child: CustomScrollView(
-        physics: const BouncingScrollPhysics(),
+        physics: BouncingScrollPhysics(),
         slivers: <Widget>[
-          SliverAppBar(
-            leading: IconButton(onPressed: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const MyHome()),
-              );
-            }, icon: Icon(Icons.arrow_back,color: Colors.black)),
+           SliverAppBar(
+             leading: IconButton(onPressed: () {
+               Navigator.pushReplacement(
+                 context,
+                 MaterialPageRoute(
+                     builder: (context) => const MyHome()),
+               );
+             }, icon: Icon(Icons.arrow_back,color: Colors.black)),
             pinned: true,
             expandedHeight: 300.0,
             // collapsedHeight: 100.0,
@@ -51,16 +51,16 @@ class Sports extends StatelessWidget {
               ),
               child: FlexibleSpaceBar(
                 centerTitle: true,
-                background: Image(image: AssetImage('assets/sports1.png'),),
-                title: Text('Sports',
-                  textAlign: TextAlign.end,
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 25,
-                      letterSpacing: 2.0,
-                      decoration: TextDecoration.underline,
-                      decorationStyle: TextDecorationStyle.dashed
-                  ),
+                background: Image(image: AssetImage('assets/furniture4.png'),),
+                title: Text('Furniture',
+                textAlign: TextAlign.end,
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 25,
+                    letterSpacing: 2.0,
+                    decoration: TextDecoration.underline,
+                    decorationStyle: TextDecorationStyle.dashed
+                ),
                 ),
                 expandedTitleScale: 1.5,
               ),

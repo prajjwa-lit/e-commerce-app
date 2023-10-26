@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:shoppingapp/home.dart';
 import 'package:shoppingapp/product_data.dart';
-class Fashion extends StatelessWidget {
+class Sports extends StatelessWidget {
 
-  Fashion({super.key});
+  Sports({super.key});
   final List<ProductDetails> temp = [
-    ProductDetails(image: 'fasjfas', name: 'product 1', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 2', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 3', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 4', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 5', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 6', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 7', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 8', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 9', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 10', price: '150 rupiya'),
+    ProductDetails(image: 'fasjfas', name: 'product 1', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 2', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 3', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 4', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 5', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 6', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 7', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 8', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 9', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 10', price: '₹150'),
   ];
 
   @override
@@ -33,7 +33,7 @@ class Fashion extends StatelessWidget {
               );
             }, icon: Icon(Icons.arrow_back,color: Colors.black)),
             pinned: true,
-            expandedHeight: 450.0,
+            expandedHeight: 300.0,
             // collapsedHeight: 100.0,
             flexibleSpace: Container(
               decoration: BoxDecoration(
@@ -51,8 +51,8 @@ class Fashion extends StatelessWidget {
               ),
               child: FlexibleSpaceBar(
                 centerTitle: true,
-                background: Image(image: AssetImage('assets/fashion1.png'),),
-                title: Text('Fashion',
+                background: Image(image: AssetImage('assets/sports1.png'),),
+                title: Text('Sports',
                   textAlign: TextAlign.end,
                   style: TextStyle(
                       color: Colors.black,
@@ -62,7 +62,7 @@ class Fashion extends StatelessWidget {
                       decorationStyle: TextDecorationStyle.dashed
                   ),
                 ),
-                expandedTitleScale: 1.3,
+                expandedTitleScale: 1.5,
               ),
             ),
           ),

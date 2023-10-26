@@ -1,32 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:shoppingapp/furniture.dart';
-import 'package:shoppingapp/electronics.dart';
-import 'package:shoppingapp/sports.dart';
-import 'package:shoppingapp/fashion.dart';
-import 'package:shoppingapp/kitchen.dart';
+import 'package:shoppingapp/productpages/furniture.dart';
+import 'package:shoppingapp/productpages/electronics.dart';
+import 'package:shoppingapp/productpages/sports.dart';
+import 'package:shoppingapp/productpages/fashion.dart';
+import 'package:shoppingapp/productpages/kitchen.dart';
 import 'package:shoppingapp/userpages/mycart.dart';
 import 'package:shoppingapp/userpages/orders.dart';
 import 'package:shoppingapp/userpages/wishlist.dart';
 import 'package:url_launcher/url_launcher.dart';
 class  MyHome extends StatelessWidget {
   const MyHome({super.key});
-
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 5,
       child: Scaffold(
         appBar: AppBar(
-          leading: const Padding(
-            padding: EdgeInsets.fromLTRB(2.0, 1.0, 10.0, 15.0),
-            child: Icon(Icons.home,
-            color: Colors.black,),
-          ),
-
           title: const Padding(
-            padding: EdgeInsets.fromLTRB(2.0, 1.0, 10.0, 15.0),
-            child: Text('Gian\'s Online Store',
+            padding: EdgeInsets.fromLTRB(2.0, 4.0, 10.0, 0.0),
+            child: Text('Wondercart',
               style:TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.w600
@@ -42,28 +35,19 @@ class  MyHome extends StatelessWidget {
                   Color(0xff0cebeb),
                   Color(0xff20e3b2),
                   Color(0xff29ffc6),
-                  //Color(0xff02AABD),
-                  //Color(0xff00CDAC),
                 ],
               )
             ),
           ),
           actions: <Widget>[
-            Padding(
-                padding: const EdgeInsets.fromLTRB(2.0, 1.0, 10.0, 15.0),
-                child: GestureDetector(
-                  onTap: () {},
-                  child: const Icon(
-                      Icons.more_vert
-                  ),
-                )
-            ),
+
           ],
           actionsIconTheme: const IconThemeData(
               size: 30.0,
               color: Colors.black,
               opacity: 10.0
           ),
+          iconTheme: IconThemeData(color: Colors.black),
           bottom:  PreferredSize(
             preferredSize:  const Size.fromHeight(100.0),
             child: Column(
@@ -101,7 +85,7 @@ class  MyHome extends StatelessWidget {
                         ) ,
                         child: InkWell(
                           onTap: () {
-                            Navigator.pushReplacement(
+                            Navigator.push(
                               context,
                               MaterialPageRoute(
                                   builder: (context) => Electronics()),
@@ -119,7 +103,7 @@ class  MyHome extends StatelessWidget {
                         ) ,
                         child: InkWell(
                             onTap: () {
-                              Navigator.pushReplacement(
+                              Navigator.push(
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => Furniture()),
@@ -137,7 +121,7 @@ class  MyHome extends StatelessWidget {
                         ) ,
                         child: InkWell(
                           onTap: () {
-                            Navigator.pushReplacement(
+                            Navigator.push(
                               context,
                               MaterialPageRoute(
                                   builder: (context) => Sports()),
@@ -155,7 +139,7 @@ class  MyHome extends StatelessWidget {
                         ) ,
                         child: InkWell(
                           onTap: () {
-                            Navigator.pushReplacement(
+                            Navigator.push(
                               context,
                               MaterialPageRoute(
                                   builder: (context) => Kitchen()),
@@ -173,7 +157,7 @@ class  MyHome extends StatelessWidget {
                         ) ,
                         child: InkWell(
                           onTap: () {
-                            Navigator.pushReplacement(
+                            Navigator.push(
                               context,
                               MaterialPageRoute(
                                   builder: (context) => Fashion()),
@@ -189,6 +173,129 @@ class  MyHome extends StatelessWidget {
             ),
           ),
         ),
+        drawer: Drawer(
+            backgroundColor: Colors.white,
+            surfaceTintColor: Colors.black,
+            child: ListView(
+              children: [
+                const UserAccountsDrawerHeader(
+                    arrowColor:Colors.black ,
+                    currentAccountPicture: CircleAvatar(
+                      backgroundImage: AssetImage("assets/user.png"),
+                    ),
+                    decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment(-1,-1),
+                          end: Alignment(1,1),
+                          colors: <Color>[
+                            Color(0xff0cebeb),
+                            Color(0xff20e3b2),
+                            Color(0xff29ffc6),
+                          ],
+                        )),
+                    accountName: Text('User\'s name',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                      ),),
+                    accountEmail: Text('User\'s email',
+                      style: TextStyle(
+                        color:Colors.black,
+                        fontSize: 20,
+                      ),)),
+                TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Electronics()),
+                      );
+                    },
+                    child: const Text("Electronics",
+                      style: TextStyle(
+                        fontSize: 20,
+                        color:Colors.black,
+                      ), )),
+                Divider(
+                  height: 10.0,
+                  thickness: 0.5,
+                  color: Colors.black45,
+                  indent: 20.0,
+                  endIndent: 20.0,
+                ),
+                TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Furniture()),
+                      );
+                    },
+                    child: const Text("Furniture",
+                        style: TextStyle(
+                            fontSize: 20,
+                            color:Colors.black))),
+                Divider(
+                  height: 10.0,
+                  thickness: 0.5,
+                  color: Colors.black45,
+                  indent: 20.0,
+                  endIndent: 20.0,
+                ),
+                TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Sports()),
+                      );
+                    },
+                    child: const Text("Sports",
+                        style: TextStyle(
+                            fontSize: 20,
+                            color:Colors.black))),
+                Divider(
+                  height: 10.0,
+                  thickness: 0.5,
+                  color: Colors.black45,
+                  indent: 20.0,
+                  endIndent: 20.0,
+                ),
+                TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Kitchen()),
+                      );
+                    },
+                    child: const Text("Kitchen",
+                        style: TextStyle(
+                            fontSize: 20,
+                            color:Colors.black))),
+                Divider(
+                  height: 10.0,
+                  thickness: 0.5,
+                  color: Colors.black45,
+                  indent: 20.0,
+                  endIndent: 20.0,
+                ),
+                TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Fashion()),
+                      );
+                    },
+                    child: const Text("Fashion",
+                        style: TextStyle(
+                            fontSize: 20,
+                            color:Colors.black))),
+                Divider(
+                  height: 10.0,
+                  thickness: 0.5,
+                  color: Colors.black45,
+                  indent: 20.0,
+                  endIndent: 20.0,
+                ),
+              ],
+            )),
         body: ListView(
             children:
             [
@@ -198,7 +305,7 @@ class  MyHome extends StatelessWidget {
                   //1st Image of Slider
                   InkWell(
                     onTap: () {
-                      Navigator.pushReplacement(
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) => Electronics()),
@@ -220,7 +327,7 @@ class  MyHome extends StatelessWidget {
                   //2nd Image of Slider
                   InkWell(
                     onTap: () {
-                      Navigator.pushReplacement(
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) => Furniture()),
@@ -242,7 +349,7 @@ class  MyHome extends StatelessWidget {
                   //3rd Image of Slider
                   InkWell(
                     onTap: () {
-                      Navigator.pushReplacement(
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) => Sports()),
@@ -264,7 +371,7 @@ class  MyHome extends StatelessWidget {
                   //4th Image of Slider
                   InkWell(
                     onTap: () {
-                      Navigator.pushReplacement(
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) => Fashion()),
@@ -286,7 +393,7 @@ class  MyHome extends StatelessWidget {
                   //5th Image of Slider
                   InkWell(
                     onTap: () {
-                      Navigator.pushReplacement(
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) => Kitchen()),
@@ -367,18 +474,36 @@ class  MyHome extends StatelessWidget {
                                     labelText: "Name",
                                     icon: Icon(Icons.account_box),
                                   ),
+                                  validator: (value){
+                                    if(value!.isEmpty){
+                                      return "Enter valid name";
+                                    }
+                                    return null;
+                                  },
                                 ),
                                 TextFormField(
                                   decoration: const InputDecoration(
                                     labelText: "Email",
                                     icon: Icon(Icons.email),
                                   ),
+                                  validator: (value){
+                                    if(value!.isEmpty){
+                                      return "enter valid email";
+                                    }
+                                    return null;
+                                  },
                                 ),
                                 TextFormField(
                                   decoration: const InputDecoration(
                                     labelText: "Phone Number",
                                     icon: Icon(Icons.phone),
                                   ),
+                                  validator: (value){
+                                    if(value!.isEmpty){
+                                      return "enter valid email";
+                                    }
+                                    return null;
+                                  },
                                 ),
                               ],
                             ),
@@ -409,7 +534,7 @@ class  MyHome extends StatelessWidget {
                                   color: Colors.black87
                                 ),),
                                 onPressed: () {
-                                  // your code
+
                                 },
                       style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.transparent,
@@ -425,7 +550,7 @@ class  MyHome extends StatelessWidget {
                   },)),
                 Expanded(child:IconButton(icon: Icon(Icons.delivery_dining, color: Colors.black,),
                   onPressed: () {
-                    Navigator.pushReplacement(
+                    Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) => Orders()),
@@ -433,7 +558,7 @@ class  MyHome extends StatelessWidget {
                     },)),
                 Expanded(child:IconButton(icon: Icon(Icons.shopping_cart, color: Colors.black,),
                   onPressed: () {
-                    Navigator.pushReplacement(
+                    Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) => Mycart()),
@@ -441,7 +566,7 @@ class  MyHome extends StatelessWidget {
                   },)),
                 Expanded(child:IconButton(icon: Icon(Icons.star, color: Colors.black,),
                   onPressed: () {
-                    Navigator.pushReplacement(
+                    Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) => Wishlist()),
@@ -513,7 +638,7 @@ class HomePageCards extends StatelessWidget {
               Card(
                   child: InkWell(
                     onTap: () {
-                      Navigator.pushReplacement(
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) => Furniture()),
@@ -540,7 +665,7 @@ class HomePageCards extends StatelessWidget {
             Card(
                 child: InkWell(
                   onTap: () {
-                    Navigator.pushReplacement(
+                    Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) => Fashion()),
@@ -589,7 +714,7 @@ class HomePageCards extends StatelessWidget {
             Card(
               child: InkWell(
                 onTap: () {
-                  Navigator.pushReplacement(
+                  Navigator.push(
                     context,
                     MaterialPageRoute(
                         builder: (context) => Kitchen()),
@@ -619,7 +744,7 @@ class HomePageCards extends StatelessWidget {
             Card(
                 child: InkWell(
                   onTap: () {
-                    Navigator.pushReplacement(
+                    Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) => Sports()),

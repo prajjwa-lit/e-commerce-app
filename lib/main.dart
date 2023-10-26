@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shoppingapp/home.dart';
+import 'package:shoppingapp/splashscreen.dart';
 
 void main ()
 {
@@ -9,11 +10,13 @@ void main ()
     statusBarColor: Colors.transparent,
   ));
     return runApp(MaterialApp(
-      initialRoute: '/home',
+      theme: ThemeData(primaryIconTheme: IconThemeData(color: Colors.black)),
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/splashscreen',
       routes:
       {
 
-        '/home' : (context) => const MyHome(),
+        '/splashscreen' : (context) => const SplashScreen(),
 
       },
     ));

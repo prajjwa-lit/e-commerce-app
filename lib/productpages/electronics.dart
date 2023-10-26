@@ -5,16 +5,16 @@ class Electronics extends StatelessWidget {
 
   Electronics({super.key});
   final List<ProductDetails> temp = [
-    ProductDetails(image: 'fasjfas', name: 'product 1', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 2', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 3', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 4', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 5', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 6', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 7', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 8', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 9', price: '150 rupiya'),
-    ProductDetails(image: 'fasjfas', name: 'product 10', price: '150 rupiya'),
+    ProductDetails(image: 'fasjfas', name: 'product 1', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 2', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 3', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 4', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 5', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 6', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 7', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 8', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 9', price: '₹150'),
+    ProductDetails(image: 'fasjfas', name: 'product 10', price: '₹150'),
   ];
 
   @override
